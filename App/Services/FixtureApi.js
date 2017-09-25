@@ -20,5 +20,26 @@ export default {
       ok: true,
       data: username.toLowerCase() === 'gantman' ? gantmanData : skellockData
     }
+  },
+  getProducts: () => {
+    const products = require('../Fixtures/products.json')
+    return {
+      ok: true,
+      data: products
+    }
+  },
+  fetchOrder: () => {
+    const order = require('../Fixtures/order.json')
+    return {
+      ok: true,
+      data: order
+    }
+  },
+  submitOrder: () => {
+    const order = require('../Fixtures/order.json')
+    return {
+      ok: true,
+      data: order
+    }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "orders",
+    "id": "yhgcalr",
+    "attributes": {
+      "status": "completed"
+    },
+    "included": [
+      {
+        "id": "yungy766",
+        "attributes": {
+          "name": "Fries",
+          "description": "With ketchup!",
+          "price": 5
+        }
+      },
+      {
+        "id": "yhy6uhk",
+        "attributes": {
+          "name": "Kebab",
+          "description": "Extra spicy!",
+          "price": 10
+        }
+      }
+    ]
+  }
+}

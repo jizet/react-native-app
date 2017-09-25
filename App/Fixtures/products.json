@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": "yungy766",
+      "attributes": {
+        "name": "Fries",
+        "description": "With ketchup!",
+        "price": 5
+      }
+    },
+    {
+      "id": "yhy6uhk",
+      "attributes": {
+        "name": "Kebab",
+        "description": "Extra spicy!",
+        "price": 10
+      }
+    },
+    {
+      "id": "ac2gu26",
+      "attributes": {
+        "name": "Capuccino",
+        "description": "To wake up in the mornings!",
+        "price": 3
+      }
+    }
+  ]
+}

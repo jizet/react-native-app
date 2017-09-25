@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { autoRehydrate } from 'redux-persist'
+import { createLogger } from 'redux-logger'
 import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 import RehydrationServices from '../Services/RehydrationServices'
@@ -21,6 +22,19 @@ export default (rootReducer, rootSaga) => {
   const sagaMonitor = Config.useReactotron ? console.tron.createSagaMonitor() : null
   const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
   middleware.push(sagaMiddleware)
+
+/* ------------- Logger Middleware ------------- */
+
+  if (__DEV__) {
+    // the logger master switch
+    const USE_LOGGING = Config.reduxLogging
+    // silence these saga-based messages
+    // create the logger
+    const logger = createLogger({
+      predicate: (getState, { type }) => USE_LOGGING
+    })
+    middleware.push(logger)
+  }
 
   /* ------------- Assemble Middleware ------------- */
 
